@@ -1,0 +1,30 @@
+Erro 1: src\components\MyList.js: src\components\MyList.js:Invalid call at line 56: require("./src/images/" + u.image)
+Solução: Trocar caminho de img do array para require('../images/img2.png')
+Trocar Source para source={u.image}
+Erro 2: Undefined is not a function - componentWillMount()
+Solução: Troca de this.getListOfPictures(); para this.getListOfData();
+Erro 3: Erro no App de importação do MyList
+Solução: Meu código ficou assim:
+
+import React, { Component } from 'react';
+import { View, Text, Button} from 'react-native';
+import MyList from './src/components/MyList';
+
+
+class App extends Component
+{
+
+  render(){
+    return(
+      <View>
+        <MyList/>
+        {/* <Text>Olá</Text> */}
+      </View>
+    );
+  }
+}
+
+export default App;
+
+Melhoria para img - padding:
+<View style={{ padding: 0 }}>
